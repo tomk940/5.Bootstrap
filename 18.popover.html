@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+      
+    <title>Popover</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+      
+      <style>
+      
+      </style>
+      
+      
+  </head>
+  <body>
+      <div class="container">
+          
+          <h1>Popover</h1>
+          
+          <button type="button" class="btn btn-primary" data-toggle="popover" data-content="<h4>Popover</h4><p> - This is a popover</p>" data-trigger="hover">Button</button>
+          
+          
+          
+          
+          
+          
+      </div>
+    
+
+      
+
+      
+      
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+      
+      
+      <script>
+          $(function(){
+              $('[data-toggle="popover"]').popover({
+                  html: true,
+                  delay: {"show":1000, "hide": 2000}
+              });
+              $('[data-toggle="popover"]').on('hidden.bs.popover', function(){
+                 window.alert('Popover hidden!') ;
+              });
+          })
+      </script>
+      
+  </body>
+</html>

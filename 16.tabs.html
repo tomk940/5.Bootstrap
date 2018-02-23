@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+      
+    <title>Tabs</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+      
+      <style>
+      
+      </style>
+      
+      
+  </head>
+  <body>
+      <div class="container">
+          
+          <h1>Tabs</h1>
+          
+         <ul class="nav nav-tabs nav-justified" id="myTabs">
+            <li role="presentation" class="active"><a href="#home" data-toggle="tab"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+            <li role="presentation"><a href="#messages" data-toggle="tab"><span class="glyphicon glyphicon-envelope"></span> Messages <span class="badge">3</span></a></li>
+            <li role="presentation"><a href="#notifications" data-toggle="tab"><span class="glyphicon glyphicon-flag"></span> Notifications <span class="badge">9</span></a></li>
+            <li role="presentation"><a href="#contactUs" data-toggle="tab"><span class="glyphicon glyphicon-earphone" ></span> Contact Us</a></li>
+          </ul>
+          
+          
+          
+          <div id="myTabContent" class="tab-content">
+              <div class="tab-pane active fade in" id="home">
+                  <h2>Home Content</h2>
+                  <p>Some Text</p>
+                  <p>Some Text</p>
+                  <p>Some Text</p>
+                  <p>Some Text</p>
+                  <p>Some Text</p>
+                  <p>Some Text</p>
+                  <p>Some Text</p>
+              </div>
+              <div class="tab-pane fade in" id="messages">
+                  <h2>Messages Content</h2>
+                  <p>Some Text</p>
+                  <p>Some Text</p>
+                  <p>Some Text</p>
+                  <p>Some Text</p>
+                  <p>Some Text</p>
+                  <p>Some Text</p>
+                  <p>Some Text</p>
+              </div>
+              <div class="tab-pane  fade in" id="notifications">
+                  <h2>Notifications Content</h2>
+                  <p>Some Text</p>
+                  <p>Some Text</p>
+                  <p>Some Text</p>
+                  <p>Some Text</p>
+                  <p>Some Text</p>
+                  <p>Some Text</p>
+                  <p>Some Text</p>
+              </div>
+              <div class="tab-pane fade in" id="contactUs">
+                  <h2>Contact Us Content</h2>
+                  <p>Some Text</p>
+                  <p>Some Text</p>
+                  <p>Some Text</p>
+                  <p>Some Text</p>
+                  <p>Some Text</p>
+                  <p>Some Text</p>
+                  <p>Some Text</p>
+              </div>
+          </div>
+
+
+      </div>
+    
+
+      
+
+      
+      
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+      
+      
+      <script>
+//          show last tab first on page load
+          $("#myTabs a:last").tab('show');
+          
+//          show an alert when tab is clicked
+          $('a[data-toggle="tab"]').on('shown.bs.tab',function(event){
+              window.alert($(event.relatedTarget).text());
+          });
+          
+          
+         
+          
+          
+      </script>
+      
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+      
+    <title>Alert</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+      
+      <style>
+      
+      </style>
+      
+      
+  </head>
+  <body>
+      <div class="container">
+          
+          <h1>Alert</h1>
+          
+          <div id="alert1" class="alert alert-warning">
+              <a class="close" data-dismiss="alert">&times;</a>
+              <strong>Warning!</strong> Your unsaved data was lost.
+          </div>
+          
+          <div id="alert2" class="alert alert-success">
+              <a class="close" data-dismiss="alert">&times;</a>
+              <strong>Success!</strong> Your file has been uploaded successfully.
+          </div>
+          
+          
+      </div>
+    
+
+      
+
+      
+      
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+      
+      <script>
+          $(function(){
+              $('.alert').on('closed.bs.alert', function(){
+                  window.alert('alert Message closed');
+              });
+              $('#alert1').alert('close');
+          })
+      </script>
+      
+  </body>
+</html>
